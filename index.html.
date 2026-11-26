@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bella Restaurant</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fffaf4;
+    color: #392b25;
+}
+
+header {
+    background: #3b2119;
+    color: white;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 27px;
+    color: #e9b872;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #e9b872;
+}
+
+.hero {
+    min-height: 470px;
+    background: linear-gradient(
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),
+    url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 28px;
+}
+
+.btn {
+    background: #c58b45;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #a96e2e;
+}
+
+section {
+    padding: 65px 8%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    color: #713c27;
+    margin-bottom: 15px;
+}
+
+.intro {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    line-height: 1.7;
+    color: #75665e;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.food-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.09);
+    transition: transform 0.3s;
+}
+
+.food-card:hover {
+    transform: translateY(-7px);
+}
+
+.food-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.food-card h3 {
+    margin: 17px 0 8px;
+    color: #713c27;
+}
+
+.food-card p {
+    color: #75665e;
+    padding: 0 15px;
+    line-height: 1.5;
+}
+
+.price {
+    display: block;
+    color: #bd8039;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.about {
+    background: #f3e6d8;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 20px auto;
+    line-height: 1.8;
+    color: #66564d;
+}
+
+.contact {
+    background: #fffaf4;
+}
+
+.contact p {
+    margin: 15px;
+    color: #66564d;
+}
+
+footer {
+    background: #3b2119;
+    color: white;
+    text-align: center;
+    padding: 22px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        text-align: center;
+    }
+
+    nav a {
+        margin: 7px;
+        display: inline-block;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 45px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Bella Restaurant</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Delicious Food, Happy Moments</h1>
+    <p>Enjoy fresh and delicious meals made with love.</p>
+    <a href="#menu" class="btn">Explore Our Menu</a>
+</section>
+
+<section id="menu">
+    <h2 class="section-title">Our Special Menu</h2>
+    <p class="intro">
+        Discover our delicious dishes, prepared with fresh
+        ingredients and a special touch.
+    </p>
+
+    <div class="menu">
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38" alt="Pizza">
+            <h3>Italian Pizza</h3>
+            <p>Fresh pizza with cheese and delicious toppings.</p>
+            <span class="price">$12</span>
+        </div>
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd" alt="Burger">
+            <h3>Classic Burger</h3>
+            <p>Juicy burger with fresh vegetables and sauce.</p>
+            <span class="price">$10</span>
+        </div>
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601" alt="Pasta">
+            <h3>Creamy Pasta</h3>
+            <p>Delicious pasta with creamy sauce and herbs.</p>
+            <span class="price">$11</span>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2 class="section-title">About Bella</h2>
+    <p>
+        At Bella Restaurant, we believe great food brings
+        people together. Our passion is serving delicious
+        meals in a warm and welcoming atmosphere.
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="section-title">Visit Us</h2>
+    <p>We would love to welcome you!</p>
+    <p>Opening Hours: Every Day - 12 PM to 11 PM</p>
+    <a href="#home" class="btn">Back to Top</a>
+</section>
+
+<footer>
+    <p>© 2026 Bella Restaurant. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
